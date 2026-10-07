@@ -1,5 +1,7 @@
 "use client";
 
+import { site } from "@/data/site";
+
 const links = [
   { href: "#servicios", label: "Servicios" },
   { href: "#portafolio", label: "Portafolio" },
@@ -33,7 +35,7 @@ export default function Footer() {
       </div>
 
       <p className="mx-auto mt-10 max-w-6xl px-5 text-xs text-muted">
-        © {new Date().getFullYear()} Luis Obed Aranda. Todos los derechos reservados.
+        © {new Date().getFullYear()} {site.autor}. Todos los derechos reservados.
       </p>
     </footer>
   );

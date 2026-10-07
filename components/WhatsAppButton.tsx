@@ -1,11 +1,10 @@
 import { MessageCircle } from "lucide-react";
-
-const TELEFONO = "524922245021"; // el mismo que en Contact.tsx
+import { site } from "@/data/site";
 
 export default function WhatsAppButton() {
   return (
     <a
-      href={`https://wa.me/${TELEFONO}?text=${encodeURIComponent(
+      href={`https://wa.me/${site.telefono}?text=${encodeURIComponent(
         "Hola Luis, quiero información sobre una página web."
       )}`}
       target="_blank"

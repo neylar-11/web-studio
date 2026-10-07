@@ -54,12 +54,10 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="servicios" className="bg-paper py-24 text-ink">
+    <section id="servicios" className="scroll-mt-20 bg-paper py-24 text-ink">
       <div className="mx-auto max-w-6xl px-5">
         <div className="max-w-2xl">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-accent">
-            Servicios
-          </p>
+         
 
           <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
             ¿Qué puedo hacer por tu negocio?
@@ -76,9 +74,9 @@ export default function Services() {
           {services.map(({ icon: Icon, title, text }) => (
             <article
               key={title}
-              className="group rounded-2xl border border-line bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-xl"
+              className="rounded-2xl border border-line bg-card p-6 transition hover:border-accent/50"
             >
-              <div className="mb-5 inline-flex rounded-xl bg-accent/10 p-3 text-accent transition-transform duration-300 group-hover:scale-110">
+              <div className="mb-5 inline-flex rounded-xl bg-accent/10 p-3 text-accent">
                 <Icon size={26} />
               </div>
 

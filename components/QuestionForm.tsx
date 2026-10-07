@@ -3,6 +3,9 @@
 import { useActionState } from "react";
 import { enviarPregunta, type EstadoEnvio } from "@/app/actions";
 
+const campo =
+  "rounded-xl border border-line bg-card px-4 py-3 outline-none focus:border-accent";
+
 export default function QuestionForm() {
   const [estado, accion, enviando] = useActionState<EstadoEnvio, FormData>(
     enviarPregunta,
@@ -17,21 +20,32 @@ export default function QuestionForm() {
       </p>
 
       <div className="mt-5 grid gap-4">
+        {/* Campo trampa anti-spam: invisible para personas */}
+        <input
+          type="text"
+          name="sitio_web"
+          tabIndex={-1}
+          autoComplete="off"
+          className="hidden"
+          aria-hidden="true"
+        />
         <input
           name="nombre"
+          aria-label="Tu nombre"
           placeholder="Tu nombre"
           required
           maxLength={60}
-          className="rounded-xl border border-line bg-card px-4 py-3 outline-none focus:border-accent"
+          className={campo}
         />
         <textarea
           name="pregunta"
+          aria-label="Tu pregunta"
           placeholder="Escribe tu pregunta"
           required
           minLength={10}
           maxLength={500}
           rows={3}
-          className="rounded-xl border border-line bg-card px-4 py-3 outline-none focus:border-accent"
+          className={campo}
         />
       </div>
 
@@ -44,7 +58,11 @@ export default function QuestionForm() {
       </button>
 
       {estado && (
-        <p className={`mt-4 text-sm font-medium ${estado.ok ? "text-green-600" : "text-red-600"}`}>
+        <p
+          className={`mt-4 text-sm font-medium ${
+            estado.ok ? "text-green-600" : "text-red-600"
+          }`}
+        >
           {estado.mensaje}
         </p>
       )}

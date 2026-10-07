@@ -2,11 +2,7 @@
 
 import { useState } from "react";
 import { MessageCircle, Mail, Phone } from "lucide-react";
-
-// Cambia estos tres por tus datos reales
-const TELEFONO = "524922245021"; // 52 + 10 dígitos, sin espacios
-const CORREO = "luisobedaranda@gmail.com";
-const TEL_VISIBLE = "+52 492 224 5021";
+import { site } from "@/data/site";
 
 const campo =
   "w-full rounded-xl border border-border bg-surface px-4 py-3 text-text outline-none placeholder:text-muted focus:border-accent";
@@ -38,11 +34,11 @@ export default function Contact() {
 
     if (medio === "whatsapp") {
       window.open(
-        `https://wa.me/${TELEFONO}?text=${encodeURIComponent(texto)}`,
+        `https://wa.me/${site.telefono}?text=${encodeURIComponent(texto)}`,
         "_blank"
       );
     } else {
-      window.location.href = `mailto:${CORREO}?subject=${encodeURIComponent(
+      window.location.href = `mailto:${site.correo}?subject=${encodeURIComponent(
         "Solicitud de cotización"
       )}&body=${encodeURIComponent(texto)}`;
     }
@@ -63,7 +59,7 @@ export default function Contact() {
       />
 
       <div className="relative mx-auto grid max-w-6xl gap-14 px-5 lg:grid-cols-2 lg:gap-20">
-        {/* Lado izquierdo: texto y accesos directos */}
+        {/* Texto y accesos directos */}
         <div>
           <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
             Cada negocio es distinto. Tu cotización también.
@@ -78,7 +74,7 @@ export default function Contact() {
           </p>
           <div className="mt-4 flex flex-col gap-3">
             <a
-              href={`https://wa.me/${TELEFONO}?text=${encodeURIComponent(
+              href={`https://wa.me/${site.telefono}?text=${encodeURIComponent(
                 "Hola Luis, quiero cotizar una página web."
               )}`}
               target="_blank"
@@ -92,29 +88,29 @@ export default function Contact() {
               </span>
             </a>
             <a
-              href={`tel:+${TELEFONO}`}
+              href={`tel:+${site.telefono}`}
               className="inline-flex items-center gap-3 rounded-2xl border border-border bg-surface/60 px-5 py-4 transition hover:border-accent/60"
             >
               <Phone className="text-accent" />
               <span>
                 <span className="block font-semibold">Llamar</span>
-                <span className="text-sm text-muted">{TEL_VISIBLE}</span>
+                <span className="text-sm text-muted">{site.telVisible}</span>
               </span>
             </a>
             <a
-              href={`mailto:${CORREO}`}
+              href={`mailto:${site.correo}`}
               className="inline-flex items-center gap-3 rounded-2xl border border-border bg-surface/60 px-5 py-4 transition hover:border-accent/60"
             >
               <Mail className="text-accent" />
               <span>
                 <span className="block font-semibold">Correo</span>
-                <span className="text-sm text-muted">{CORREO}</span>
+                <span className="text-sm text-muted">{site.correo}</span>
               </span>
             </a>
           </div>
         </div>
 
-        {/* Lado derecho: formulario que arma el mensaje */}
+        {/* Formulario que arma el mensaje */}
         <form
           onSubmit={enviar}
           className="grid gap-4 rounded-3xl border border-border bg-surface/60 p-6 sm:p-8"
@@ -129,6 +125,7 @@ export default function Contact() {
           <input
             value={nombre}
             onChange={(e) => setNombre(e.target.value)}
+            aria-label="Tu nombre"
             placeholder="Tu nombre"
             required
             maxLength={60}
@@ -137,6 +134,7 @@ export default function Contact() {
           <input
             value={negocio}
             onChange={(e) => setNegocio(e.target.value)}
+            aria-label="Nombre de tu negocio"
             placeholder="Nombre de tu negocio (opcional)"
             maxLength={80}
             className={campo}
@@ -144,6 +142,7 @@ export default function Contact() {
           <select
             value={tipo}
             onChange={(e) => setTipo(e.target.value)}
+            aria-label="Qué necesitas"
             required
             className={campo}
           >
@@ -156,6 +155,7 @@ export default function Contact() {
           <textarea
             value={mensaje}
             onChange={(e) => setMensaje(e.target.value)}
+            aria-label="Descripción de tu proyecto"
             placeholder="Describe brevemente tu negocio y lo que tienes en mente"
             required
             minLength={10}

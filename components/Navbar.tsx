@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { site } from "@/data/site";
 
 const links = [
   { href: "#servicios", label: "Servicios" },
