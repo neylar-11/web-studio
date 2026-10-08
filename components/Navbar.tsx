@@ -17,12 +17,21 @@ export default function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-bg/80 backdrop-blur-md">
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
-        {/* Logo provisional */}
+                {/* Logo */}
         <a
           href="#inicio"
-          className="text-lg font-extrabold tracking-tight text-text"
+          className="flex items-center gap-3 text-lg font-extrabold tracking-tight text-text"
         >
-          web<span className="text-accent">studio</span>
+          <img
+            src="/logo.png"
+            alt="Logo de Luis Obed"
+            width={36}
+            height={36}
+            className="h-9 w-9 rounded-lg"
+          />
+          <span>
+            web<span className="text-accent">studio</span>
+          </span>
         </a>
 
         {/* Menú de escritorio */}

@@ -4,6 +4,8 @@ export default async function CommunityQuestions() {
   const { data } = await supabase
     .from("preguntas")
     .select("id, nombre, pregunta, respuesta, creada_en")
+    .not("respuesta", "is", null)
+    .neq("respuesta", "")
     .order("creada_en", { ascending: false });
 
   if (!data || data.length === 0) return null;
