@@ -11,6 +11,10 @@ export const metadata: Metadata = {
   title: "Páginas web profesionales para tu negocio",
   description:
     "Diseño y desarrollo de páginas web modernas, rápidas y adaptadas a celular para negocios en México.",
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({
