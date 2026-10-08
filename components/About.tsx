@@ -1,5 +1,5 @@
 import {
-  GraduationCap,
+  ClipboardCheck,
   Code2,
   Database,
   Network,
@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 
 const strengths = [
-  { icon: GraduationCap, label: "7.º semestre de Ingeniería en Software" },
+  { icon: ClipboardCheck  , label: "Calidad, pruebas y mantenimiento de software"},
   { icon: Code2, label: "Desarrollo web y programación orientada a objetos" },
   { icon: Database, label: "Bases de datos y arquitectura de software" },
   { icon: Handshake, label: "Comunicación directa y atención personalizada" },
@@ -70,28 +70,30 @@ export default function About() {
         {/* Contenido */}
         <div>
           <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
-            Hola, soy Luis
+            Hola, soy Obed
           </h2>
 
           <p className="mt-6 text-lg leading-relaxed text-ink-muted">
-            Estudio Ingeniería en Software en la Universidad Autónoma de
-            Zacatecas y me dedico al desarrollo web porque me gusta ver cómo una
+            Me forme en Ingeniería en Software por la Universidad Autónoma de
+            Zacatecas; me dedico al desarrollo web porque una
             buena página cambia la forma en que un negocio se presenta y
-            consigue clientes.
+            atrae clientes.
           </p>
 
           <p className="mt-4 text-lg leading-relaxed text-ink-muted">
-            Antes de escribir código busco entender tu negocio: qué quieres
-            lograr, quiénes son tus clientes y qué necesitas de verdad. Así
-            evito complicar las cosas y te entrego una solución clara, rápida y
-            fácil de usar, con la que tratas directamente conmigo de principio
-            a fin.
+            Antes de crear tu página, busco entender tu negocio: qué quieres lograr, 
+            quiénes son y quiénes quieres que sean tus clientes, qué necesitas comunicar 
+            y qué funciones realmente te pueden ayudar. Así evitamos complicar el proyecto y 
+            construimos una solución clara, funcional y pensada para tu negocio, con atención 
+            directa de principio a fin.
           </p>
 
           <p className="mt-4 text-lg leading-relaxed text-ink-muted">
-            Sigo formándome cada semestre en bases de datos, arquitectura de
-            software y aplicaciones web. Para mí, aprender constantemente es
-            parte del trabajo.
+            Mi visión es mantenerme en constante capacitación y actualización en desarrollo web, 
+            bases de datos, arquitectura de software y nuevas tecnologías. Busco fortalecer 
+            continuamente mis conocimientos técnicos para aplicar mejores prácticas, adoptar 
+            herramientas actuales y desarrollar soluciones cada vez más completas, funcionales y 
+            adaptadas a las necesidades reales de cada proyecto.
           </p>
 
           <ul className="mt-8 grid gap-3 sm:grid-cols-2">

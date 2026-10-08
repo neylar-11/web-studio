@@ -11,14 +11,14 @@ const steps = [
     number: "01",
     icon: MessageSquare,
     title: "Conocemos tu proyecto",
-    text: "Platicamos sobre tu negocio, tus ideas y lo que quieres lograr. Escucho tus necesidades para entender qué solución puede funcionar mejor para ti.",
+    text: "Identificamos tus objetivos, necesidades y requerimientos principales para establecer una base clara antes de comenzar el desarrollo.",
     result: "Objetivos y necesidades definidos",
   },
   {
     number: "02",
     icon: ClipboardList,
     title: "Planeamos la solución",
-    text: "Preparo una propuesta con las funciones, el diseño y los detalles de tu proyecto. Definimos juntos el presupuesto y los tiempos.",
+    text: "Transformo tus necesidades en una propuesta visual y funcional que nos permite definir cómo se verá y cómo funcionará tu proyecto.",
     result: "Propuesta y cotización personalizada",
   },
   {
