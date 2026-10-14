@@ -16,7 +16,7 @@ export default function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-5 md:flex-row md:items-center md:justify-between">
         <div>
           <p className="text-lg font-extrabold">
-            <span className="text-silver">
+            <span className="text-shine text-silver" data-text="iztac web">
               i<span className="text-accent">z</span>t<span className="text-accent">ac</span> web
             </span>
           </p>

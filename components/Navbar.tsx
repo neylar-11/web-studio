@@ -29,9 +29,8 @@ export default function Navbar() {
             height={36}
             className="h-9 w-9 rounded-lg"
           />
-          <span className="text-silver">
-            i<span className="text-accent">z</span>t
-            <span className="text-accent">ac</span> web
+          <span className="text-shine text-silver" data-text="iztac web">
+            i<span className="text-accent">z</span>t<span className="text-accent">ac</span> web
           </span>
         </a>
 
