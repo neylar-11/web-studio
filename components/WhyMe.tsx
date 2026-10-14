@@ -45,7 +45,7 @@ export default function WhyMe() {
     <section id="ventajas" className="scroll-mt-20 bg-card py-24 text-ink">
       <div className="mx-auto max-w-6xl px-5">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-base font-semibold text-accent">
+          <p className="eyebrow-silver text-base font-semibold text-accent">
             Tecnología pensada para tu negocio
           </p>
 
@@ -63,7 +63,7 @@ export default function WhyMe() {
         <div className="mt-16 grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
           {benefits.map(({ icon: Icon, title, text }) => (
             <article key={title} className="flex gap-4">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-accent/10 text-accent">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center silver-tile rounded-2xl text-accent">
                 <Icon size={24} />
               </div>
               <div>

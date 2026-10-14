@@ -54,7 +54,7 @@ export default function Process() {
 
         {/* Encabezado */}
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-sm font-semibold text-accent">
+          <p className="eyebrow-silver text-sm font-semibold text-accent">
             Nuestro proceso
           </p>
 
@@ -75,7 +75,7 @@ export default function Process() {
           {/* Línea vertical */}
           <div
             aria-hidden="true"
-            className="absolute bottom-8 left-6 top-6 w-px bg-line md:left-1/2 md:-translate-x-1/2"
+            className="absolute bottom-8 left-6 top-6 w-px bg-gradient-to-b from-transparent via-silver/60 to-transparent md:left-1/2 md:-translate-x-1/2"
           />
 
           <ol className="space-y-10 md:space-y-14">
@@ -96,7 +96,7 @@ export default function Process() {
                       md:col-start-2
                     "
                   >
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full border-4 border-paper bg-accent text-sm font-bold text-white shadow-lg shadow-accent/20">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent text-sm font-bold text-white shadow-lg shadow-accent/20 ring-4 ring-paper outline outline-1 outline-offset-4 outline-silver/50">
                       {step.number}
                     </div>
                   </div>

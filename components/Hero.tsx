@@ -15,7 +15,7 @@ export default function Hero() {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(60% 50% at 70% 30%, rgba(59,130,246,0.28), transparent 70%), radial-gradient(40% 40% at 20% 80%, rgba(34,211,238,0.15), transparent 70%)",
+            "radial-gradient(60% 50% at 70% 30%, rgba(59,130,246,0.28), transparent 70%), radial-gradient(40% 40% at 20% 80%, rgba(34,211,238,0.15), transparent 70%), radial-gradient(30% 25% at 85% 10%, rgba(213,219,227,0.08), transparent 70%)",
         }}
       />
 
@@ -39,7 +39,7 @@ export default function Hero() {
           className="max-w-3xl"
         >
           {/* Etiqueta superior */}
-          <p className="mb-5 inline-block rounded-full border border-accent/40 bg-accent/10 px-4 py-1.5 text-sm font-medium text-accent-2">
+          <p className="silver-edge mb-5 inline-block rounded-full px-4 py-1.5 text-sm font-medium text-silver-light [--edge-bg:#0f1a30]">
             Desarrollo web y soluciones digitales
           </p>
 
@@ -71,7 +71,7 @@ export default function Hero() {
 
             <a
               href="#portafolio"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-7 py-4 text-base font-semibold text-white transition hover:border-white/40 hover:bg-white/5"
+              className="inline-flex items-center justify-center gap-2 silver-edge rounded-full px-7 py-4 text-base font-semibold text-white transition [--edge-bg:var(--color-bg)] hover:[--edge-bg:#131d33]"
             >
               Ver proyectos
               <ArrowRight size={20} />

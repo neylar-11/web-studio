@@ -42,7 +42,7 @@ export default function Portfolio() {
       <div className="mx-auto max-w-6xl px-5">
         {/* Encabezado */}
         <div className="max-w-3xl">
-          <p className="text-sm font-semibold text-accent-2">
+          <p className="eyebrow-silver text-sm font-semibold text-accent-2">
             Portafolio
           </p>
 
@@ -61,7 +61,7 @@ export default function Portfolio() {
           {projects.map((project) => (
             <article
               key={project.title}
-              className="group overflow-hidden rounded-3xl border border-white/10 bg-surface transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:shadow-2xl"
+              className="silver-edge group overflow-hidden rounded-3xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
             >
               {/* Vista previa temporal */}
               <div

@@ -30,7 +30,7 @@ export default function About() {
     <section id="sobre-mi" className="scroll-mt-20 bg-paper py-24 text-ink">
       <div className="mx-auto grid max-w-6xl items-center gap-14 px-5 lg:grid-cols-[2fr_3fr] lg:gap-20">
         {/* Tarjeta visual */}
-        <div className="relative overflow-hidden rounded-3xl border border-border bg-bg p-8 text-text shadow-xl">
+        <div className="silver-edge relative overflow-hidden rounded-3xl p-8 text-text shadow-xl [--edge-bg:var(--color-bg)]">
           <div
             aria-hidden
             className="pointer-events-none absolute inset-0"
@@ -102,7 +102,7 @@ export default function About() {
                 key={label}
                 className="flex items-center gap-3 rounded-xl border border-line bg-card p-4 font-medium"
               >
-                <span className="shrink-0 rounded-lg bg-accent/10 p-2 text-accent">
+                <span className="silver-tile shrink-0 rounded-lg p-2 text-accent">
                   <Icon size={20} />
                 </span>
                 <span>{label}</span>

@@ -12,7 +12,8 @@ const links = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-border bg-bg py-12 text-text">
+    <footer className="relative bg-bg py-12 text-text">
+      <div aria-hidden="true" className="silver-line absolute inset-x-0 top-0" />
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-5 md:flex-row md:items-center md:justify-between">
         <div>
           <p className="text-lg font-extrabold">

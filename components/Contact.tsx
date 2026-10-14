@@ -113,7 +113,7 @@ export default function Contact() {
         {/* Formulario que arma el mensaje */}
         <form
           onSubmit={enviar}
-          className="grid gap-4 rounded-3xl border border-border bg-surface/60 p-6 sm:p-8"
+          className="silver-edge grid gap-4 rounded-3xl p-6 sm:p-8"
         >
           <div>
             <h3 className="text-xl font-bold">Cuéntame de tu proyecto</h3>
