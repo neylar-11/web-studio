@@ -45,7 +45,7 @@ export default function Hero() {
 
           {/* Título principal */}
           <h1 className="text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-            Impulsa tu negocio con{" "}
+            <span className="text-chrome">Impulsa tu negocio con</span>{" "}
             <span className="text-accent">
               tecnología e innovación.
             </span>

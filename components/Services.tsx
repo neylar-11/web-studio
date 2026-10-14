@@ -74,7 +74,7 @@ export default function Services() {
           {services.map(({ icon: Icon, title, text }) => (
             <article
               key={title}
-              className="rounded-2xl border border-line bg-card p-6 transition hover:border-accent/50"
+              className="silver-edge-light rounded-2xl p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
             >
               <div className="silver-tile mb-5 inline-flex rounded-xl p-3 text-accent">
                 <Icon size={26} />

@@ -29,37 +29,37 @@ export default function About() {
   return (
     <section id="sobre-mi" className="scroll-mt-20 bg-paper py-24 text-ink">
       <div className="mx-auto grid max-w-6xl items-center gap-14 px-5 lg:grid-cols-[2fr_3fr] lg:gap-20">
-        {/* Tarjeta visual */}
-        <div className="silver-edge relative overflow-hidden rounded-3xl p-8 text-text shadow-xl [--edge-bg:var(--color-bg)]">
+        {/* Tarjeta visual: placa de plata */}
+        <div className="silver-plate relative overflow-hidden rounded-3xl p-8 text-ink">
           <div
             aria-hidden
             className="pointer-events-none absolute inset-0"
             style={{
               background:
-                "radial-gradient(70% 60% at 20% 20%, rgba(59,130,246,0.28), transparent 70%), radial-gradient(60% 50% at 90% 90%, rgba(34,211,238,0.16), transparent 70%)",
+                "radial-gradient(60% 50% at 15% 10%, rgba(255,255,255,0.75), transparent 70%), radial-gradient(55% 50% at 95% 95%, rgba(59,130,246,0.2), transparent 70%)",
             }}
           />
 
           <div className="relative">
-            <p className="text-sm font-semibold text-accent-2">
+            <p className="text-sm font-semibold text-accent">
               Ingeniería en Software · UAZ
             </p>
 
-            <h3 className="mt-4 text-3xl font-extrabold leading-tight">
+            <h3 className="mt-4 text-3xl font-extrabold leading-tight text-ink">
               Luis Obed
               <br />
               Aranda Robles
             </h3>
 
-            <p className="mt-3 text-sm text-muted">Desarrollador web</p>
+            <p className="mt-3 text-sm font-medium text-ink-muted">Desarrollador web</p>
 
             <div className="mt-10 grid grid-cols-2 gap-3">
               {areas.map(({ icon: Icon, title }) => (
                 <div
                   key={title}
-                  className="flex items-center gap-2 rounded-xl border border-border bg-surface p-3 text-sm"
+                  className="flex items-center gap-2 rounded-xl border border-white/80 bg-white/55 p-3 text-sm font-medium text-ink shadow-sm"
                 >
-                  <Icon size={17} className="shrink-0 text-accent-2" />
+                  <Icon size={17} className="shrink-0 text-accent" />
                   {title}
                 </div>
               ))}
@@ -100,7 +100,7 @@ export default function About() {
             {strengths.map(({ icon: Icon, label }) => (
               <li
                 key={label}
-                className="flex items-center gap-3 rounded-xl border border-line bg-card p-4 font-medium"
+                className="silver-edge-light flex items-center gap-3 rounded-xl p-4 font-medium"
               >
                 <span className="silver-tile shrink-0 rounded-lg p-2 text-accent">
                   <Icon size={20} />
