@@ -15,7 +15,12 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-bg/80 backdrop-blur-md">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10">
+      {/* Fondo translúcido en capa aparte para que el brillo del nombre funcione */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 -z-10 bg-bg/80 backdrop-blur-md"
+      />
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
                 {/* Logo */}
         <a
