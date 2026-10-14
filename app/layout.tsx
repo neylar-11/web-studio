@@ -8,7 +8,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Páginas web profesionales para tu negocio",
+      title: "iztac web | Páginas web profesionales para tu negocio",
   description:
     "Diseño y desarrollo de páginas web modernas, rápidas y adaptadas a celular para negocios en México.",
   icons: {

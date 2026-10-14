@@ -16,7 +16,9 @@ export default function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-5 md:flex-row md:items-center md:justify-between">
         <div>
           <p className="text-lg font-extrabold">
-            web<span className="text-accent">studio</span>
+            <span className="text-silver">
+              i<span className="text-accent">z</span>t<span className="text-accent">ac</span> web
+            </span>
           </p>
           <p className="mt-1 text-sm text-muted">
             Páginas web y tiendas en línea para negocios que quieren crecer.

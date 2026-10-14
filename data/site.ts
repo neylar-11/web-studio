@@ -1,5 +1,5 @@
 export const site = {
-  nombre: "webstudio",
+  nombre: "iztac web",
   autor: "Luis Obed Aranda",
   telefono: "524922245021",
   telVisible: "+52 492 224 5021",

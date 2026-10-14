@@ -18,6 +18,7 @@
   /* Acento compartido */
   --color-accent: #3b82f6;
   --color-accent-2: #22d3ee;
+  --color-silver: #b4bcc6;
 
   --font-sans: var(--font-manrope), system-ui, sans-serif;
 }
