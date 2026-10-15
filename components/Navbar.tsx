@@ -5,7 +5,7 @@ import { Menu, X } from "lucide-react";
 
 const links = [
   { href: "#servicios", label: "Servicios" },
-  { href: "#ventajas", label: "Compromiso" },
+  { href: "#beneficios", label: "Beneficios" },
   { href: "#sobre-mi", label: "Sobre mí" },
   { href: "#portafolio", label: "Portafolio" },
   { href: "#proceso", label: "Proceso" },
@@ -57,7 +57,7 @@ export default function Navbar() {
         {/* Botón escritorio */}
         <a
           href="#contacto"
-          className="hidden rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-blue-500 hover:shadow-lg hover:shadow-accent/25 md:inline-flex"
+          className="glow-cta hidden rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white hover:-translate-y-0.5 hover:bg-blue-500 md:inline-flex"
         >
           Cotizar mi proyecto
         </a>
@@ -98,7 +98,7 @@ export default function Navbar() {
               <a
                 href="#contacto"
                 onClick={() => setOpen(false)}
-                className="block rounded-full bg-accent px-5 py-3 text-center font-semibold text-white transition hover:bg-blue-500"
+                className="glow-cta block rounded-full bg-accent px-5 py-3 text-center font-semibold text-white hover:bg-blue-500"
               >
                 Cotizar mi proyecto
               </a>

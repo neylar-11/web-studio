@@ -1,5 +1,7 @@
 "use client";
 
+import { Reveal } from "./Motion";
+
 import { useState } from "react";
 import { MessageCircle, Mail, Phone } from "lucide-react";
 import { site } from "@/data/site";
@@ -47,7 +49,7 @@ export default function Contact() {
   return (
     <section
       id="contacto"
-      className="relative scroll-mt-20 overflow-hidden bg-bg py-24 text-text"
+      className="relative scroll-mt-20 overflow-hidden bg-bg py-16 sm:py-24 text-text"
     >
       <div
         aria-hidden
@@ -60,7 +62,7 @@ export default function Contact() {
 
       <div className="relative mx-auto grid max-w-6xl gap-14 px-5 lg:grid-cols-2 lg:gap-20">
         {/* Texto y accesos directos */}
-        <div>
+        <Reveal>
           <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
             Cada negocio es distinto. Tu cotización también.
           </h2>
@@ -108,9 +110,10 @@ export default function Contact() {
               </span>
             </a>
           </div>
-        </div>
+        </Reveal>
 
         {/* Formulario que arma el mensaje */}
+        <Reveal delay={0.12}>
         <form
           onSubmit={enviar}
           className="silver-edge grid gap-4 rounded-3xl p-6 sm:p-8"
@@ -193,11 +196,12 @@ export default function Contact() {
 
           <button
             type="submit"
-            className="mt-2 rounded-full bg-accent px-6 py-3.5 font-semibold text-white transition hover:bg-blue-500"
+            className="glow-cta mt-2 rounded-full bg-accent px-6 py-3.5 font-semibold text-white hover:bg-blue-500"
           >
             {medio === "whatsapp" ? "Abrir en WhatsApp" : "Abrir en mi correo"}
           </button>
         </form>
+        </Reveal>
       </div>
     </section>
   );

@@ -52,7 +52,7 @@ export default function QuestionForm() {
       <button
         type="submit"
         disabled={enviando}
-        className="mt-5 rounded-full bg-accent px-6 py-3 font-semibold text-white transition hover:bg-blue-500 disabled:opacity-60"
+        className="glow-cta mt-5 rounded-full bg-accent px-6 py-3 font-semibold text-white hover:bg-blue-500 disabled:opacity-60"
       >
         {enviando ? "Enviando..." : "Enviar pregunta"}
       </button>

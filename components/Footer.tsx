@@ -12,7 +12,7 @@ const links = [
 
 export default function Footer() {
   return (
-    <footer className="relative bg-bg py-12 text-text">
+    <footer className="relative bg-bg pt-12 pb-24 text-text sm:pb-12">
       <div aria-hidden="true" className="silver-line absolute inset-x-0 top-0" />
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-5 md:flex-row md:items-center md:justify-between">
         <div>
@@ -22,7 +22,7 @@ export default function Footer() {
             </span>
           </p>
           <p className="mt-1 text-sm text-muted">
-            Páginas web y tiendas en línea para negocios que quieren crecer.
+            Desarrollo web y soluciones digitales para negocios.
           </p>
         </div>
 

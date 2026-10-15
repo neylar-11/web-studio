@@ -1,68 +1,66 @@
+import { Reveal, Cascade, CascadeItem } from "./Motion";
 import {
   MonitorSmartphone,
   PenTool,
   UserCheck,
-  Share2,
+  Store,
   Search,
   Clock,
 } from "lucide-react";
 
 const benefits = [
   {
-    icon: Share2,
-    title: "Tus redes no son tuyas",
-    text: "Facebook e Instagram cambian sus reglas de forma inesperada y tu alcance puede bajar de un día para otro. Tu página no tiene lmites.",
+    icon: Store,
+    title: "Un espacio propio",
+    text: "Tu información en un canal que no depende del alcance ni de los cambios de una red social.",
   },
   {
     icon: Search,
-    title: "Te encuentran en Google",
-    text: "Antes de comprar, tus clientes buscan en Google. Con tu página, tu negocio aparece justo donde te están buscando.",
+    title: "Presencia en buscadores",
+    text: "Una web bien estructurada crea una mejor base para que tu negocio pueda aparecer en búsquedas relacionadas.",
   },
   {
     icon: Clock,
-    title: "Trabaja las 24 horas",
-    text: "Tu página informa y atrae clientes todos los días, a cualquier hora, aunque no estés publicando.",
+    title: "Disponible las 24 horas",
+    text: "La información de tu negocio está disponible a cualquier hora, incluso cuando no estás atendiendo.",
   },
   {
     icon: MonitorSmartphone,
-    title: "Adaptada a cualquier dispositivo",
-    text: "Tu sitio se diseña para ofrecer una experiencia clara y cómoda en celular, tablet y computadora.",
+    title: "En cualquier pantalla",
+    text: "Se ve y funciona bien en celular, tablet y computadora. Puedes tener el mismo diseño en todas o uno distinto para cada pantalla, según lo que prefieras.",
   },
   {
     icon: PenTool,
-    title: "Diseño pensado para tu negocio",
-    text: "La estructura, imagen y contenido se desarrollan de acuerdo con tu marca, tus servicios y lo que quieres comunicar.",
+    title: "Con tu identidad",
+    text: "Diseño, colores y contenido de acuerdo con tu marca.",
   },
   {
     icon: UserCheck,
-    title: "Atención personalizada",
-    text: "Trabajamos directamente durante el proceso para entender tu idea, resolver dudas y desarrollar una solución acorde a tus objetivos.",
+    title: "Trato directo",
+    text: "La misma persona que te atiende es quien construye tu página, de principio a fin.",
   },
 ];
 
 export default function WhyMe() {
   return (
-    <section id="ventajas" className="scroll-mt-20 bg-card py-24 text-ink">
+    <section id="beneficios" className="scroll-mt-20 bg-card py-16 sm:py-24 text-ink">
       <div className="mx-auto max-w-6xl px-5">
-        <div className="mx-auto max-w-3xl text-center">
+        <Reveal className="mx-auto max-w-3xl text-center">
           <p className="eyebrow-silver text-base font-semibold text-accent">
-            Tecnología pensada para tu negocio
+            Más que estar en redes
           </p>
 
           <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
-            Una solución construida alrededor de tus necesidades
+            Lo que una buena web{" "}
+            <br className="hidden md:block" />
+            hace por tu negocio
           </h2>
+        </Reveal>
 
-          <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-ink-muted">
-            No se trata solamente de crear una página bonita. Cada proyecto
-            parte de entender tu negocio, tus objetivos y la experiencia que
-            quieres ofrecer a tus clientes.
-          </p>
-        </div>
-
-        <div className="mt-16 grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+        <Cascade className="mt-12 grid gap-x-10 gap-y-10 sm:mt-16 sm:grid-cols-2 sm:gap-y-12 lg:grid-cols-3">
           {benefits.map(({ icon: Icon, title, text }) => (
-            <article key={title} className="flex gap-4">
+            <CascadeItem key={title}>
+            <article className="flex gap-4">
               <div className="flex h-12 w-12 shrink-0 items-center justify-center silver-tile rounded-2xl text-accent">
                 <Icon size={24} />
               </div>
@@ -71,8 +69,9 @@ export default function WhyMe() {
                 <p className="mt-2 leading-relaxed text-ink-muted">{text}</p>
               </div>
             </article>
+            </CascadeItem>
           ))}
-        </div>
+        </Cascade>
       </div>
     </section>
   );

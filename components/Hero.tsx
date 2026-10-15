@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { ArrowRight, FileText } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -12,7 +12,7 @@ export default function Hero() {
       {/* Iluminación tecnológica de fondo */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0"
+        className="hero-glow pointer-events-none absolute -inset-[10%]"
         style={{
           background:
             "radial-gradient(60% 50% at 70% 30%, rgba(59,130,246,0.28), transparent 70%), radial-gradient(40% 40% at 20% 80%, rgba(34,211,238,0.15), transparent 70%), radial-gradient(30% 25% at 85% 10%, rgba(213,219,227,0.08), transparent 70%)",
@@ -31,7 +31,7 @@ export default function Hero() {
       />
 
       {/* Contenido principal */}
-      <div className="relative mx-auto w-full max-w-6xl px-5 py-24">
+      <div className="relative mx-auto w-full max-w-6xl px-5 py-16 sm:py-24">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -45,27 +45,26 @@ export default function Hero() {
 
           {/* Título principal */}
           <h1 className="text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-            <span className="text-chrome">Impulsa tu negocio con</span>{" "}
-            <span className="text-accent">
-              tecnología e innovación.
+            <span className="text-chrome">
+              Que tu negocio no solo esté en internet.
             </span>
+            <span className="block text-accent">Que destaque.</span>
           </h1>
 
           {/* Descripción */}
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted sm:text-xl">
-            Diseño y desarrollo páginas web, tiendas en línea y
-            soluciones digitales modernas que ayudan a los negocios
-            a crecer, conectar con nuevos clientes y destacar
-            en internet.
+            Páginas web, tiendas en línea y soluciones digitales para
+            presentar mejor tu negocio y facilitar que tus clientes te
+            encuentren y contacten.
           </p>
 
           {/* Botones */}
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <a
               href="#contacto"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-7 py-4 text-base font-semibold text-white shadow-lg shadow-accent/30 transition hover:bg-blue-500"
+              className="inline-flex items-center justify-center gap-2 glow-cta rounded-full bg-accent px-7 py-4 text-base font-semibold text-white hover:bg-blue-500"
             >
-              <MessageCircle size={20} />
+              <FileText size={20} />
               Solicitar cotización
             </a>
 

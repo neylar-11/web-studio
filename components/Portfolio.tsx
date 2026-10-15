@@ -1,3 +1,4 @@
+import { Reveal, Cascade, CascadeItem } from "./Motion";
 import { ArrowUpRight } from "lucide-react";
 
 const projects = [
@@ -6,7 +7,7 @@ const projects = [
     badge: "Proyecto demo",
     title: "Taquería La Esquina",
     description:
-      "El menú en papel se desactualizaba constantemente. La propuesta digital centraliza el menú, facilita su consulta desde cualquier dispositivo y permite contacto directo para pedidos.",
+      "El menú en papel se desactualizaba constantemente. La propuesta digital lo centraliza, se consulta desde cualquier dispositivo y permite pedir directamente.",
     tags: ["Menú digital", "QR", "Pedidos"],
     url: "",
     gradient: "from-orange-500/20 via-red-500/10 to-transparent",
@@ -16,7 +17,7 @@ const projects = [
     badge: "Proyecto demo",
     title: "Ramírez & Asociados",
     description:
-      "Un despacho necesitaba presentar sus servicios de forma más clara y profesional. La propuesta organiza la información y facilita el contacto con nuevos clientes.",
+      "Un despacho necesitaba presentar sus servicios de forma más clara y profesional. La propuesta organiza la información y facilita el contacto.",
     tags: ["Sitio corporativo", "Servicios", "Contacto"],
     url: "",
     gradient: "from-blue-500/20 via-cyan-500/10 to-transparent",
@@ -26,7 +27,7 @@ const projects = [
     badge: "Proyecto demo",
     title: "Artesanías Mezquite",
     description:
-      "Las ventas dependían principalmente de mensajes en redes sociales. La propuesta reúne productos, categorías y pedidos en una experiencia de compra más organizada.",
+      "Las ventas dependían de mensajes en redes sociales. La propuesta reúne productos, categorías y pedidos en una compra más organizada.",
     tags: ["Catálogo", "Carrito", "Pedidos"],
     url: "",
     gradient: "from-violet-500/20 via-blue-500/10 to-transparent",
@@ -37,11 +38,11 @@ export default function Portfolio() {
   return (
     <section
       id="portafolio"
-      className="scroll-mt-20 bg-bg py-24 text-text"
+      className="scroll-mt-20 bg-bg py-16 sm:py-24 text-text"
     >
       <div className="mx-auto max-w-6xl px-5">
         {/* Encabezado */}
-        <div className="max-w-3xl">
+        <Reveal className="max-w-3xl">
           <p className="eyebrow-silver text-sm font-semibold text-accent-2">
             Portafolio
           </p>
@@ -51,18 +52,19 @@ export default function Portfolio() {
           </h2>
 
           <p className="mt-5 text-lg leading-relaxed text-muted">
-            Proyectos demostrativos creados para mostrar distintas soluciones web
-            y explorar necesidades comunes de diferentes tipos de negocio.
+            Ejemplos de soluciones para distintos tipos de negocio.
           </p>
-        </div>
+        </Reveal>
 
         {/* Proyectos */}
-        <div className="mt-14 grid gap-6 lg:grid-cols-3">
+        {/* En celular las tarjetas se deslizan de lado; en computadora, 3 columnas */}
+        <Cascade className="no-scrollbar -mx-5 mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-4 sm:mt-14 lg:mx-0 lg:grid lg:grid-cols-3 lg:gap-6 lg:overflow-visible lg:px-0 lg:pb-0">
           {projects.map((project) => (
-            <article
+            <CascadeItem
               key={project.title}
-              className="silver-edge group overflow-hidden rounded-3xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
+              className="w-[86%] shrink-0 snap-center sm:w-[62%] lg:w-auto"
             >
+            <article className="silver-edge group h-full overflow-hidden rounded-3xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
               {/* Vista previa temporal */}
               <div
                 className={`relative h-64 bg-gradient-to-br ${project.gradient}`}
@@ -75,10 +77,6 @@ export default function Portfolio() {
                       <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
                       <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
                     </div>
-
-                    <span className="rounded-full border border-white/10 px-2.5 py-1 text-[10px] font-medium text-muted">
-                      Demo
-                    </span>
                   </div>
 
                   {/* Contenido simulado */}
@@ -143,8 +141,9 @@ export default function Portfolio() {
                 )}
               </div>
             </article>
+            </CascadeItem>
           ))}
-        </div>
+        </Cascade>
       </div>
     </section>
   );

@@ -1,20 +1,14 @@
+import { SlideIn } from "./Motion";
+import PlateShine from "./PlateShine";
 import {
-  ClipboardCheck,
   Code2,
   Database,
   Network,
   ShieldCheck,
   Layers3,
-  Handshake,
   Target,
 } from "lucide-react";
 
-const strengths = [
-  { icon: ClipboardCheck  , label: "Calidad, pruebas y mantenimiento de software"},
-  { icon: Code2, label: "Desarrollo web y programación orientada a objetos" },
-  { icon: Database, label: "Bases de datos y arquitectura de software" },
-  { icon: Handshake, label: "Comunicación directa y atención personalizada" },
-];
 
 const areas = [
   { icon: Code2, title: "Desarrollo web" },
@@ -27,9 +21,10 @@ const areas = [
 
 export default function About() {
   return (
-    <section id="sobre-mi" className="scroll-mt-20 bg-card py-24 text-ink">
+    <section id="sobre-mi" className="scroll-mt-20 bg-card py-16 sm:py-24 text-ink">
       <div className="mx-auto grid max-w-6xl items-center gap-14 px-5 lg:grid-cols-[2fr_3fr] lg:gap-20">
         {/* Tarjeta visual: placa de plata */}
+        <SlideIn from="left">
         <div className="silver-plate relative overflow-hidden rounded-3xl p-8 text-ink">
           <div
             aria-hidden
@@ -39,6 +34,8 @@ export default function About() {
                 "radial-gradient(60% 50% at 15% 10%, rgba(255,255,255,0.75), transparent 70%), radial-gradient(55% 50% at 95% 95%, rgba(59,130,246,0.2), transparent 70%)",
             }}
           />
+
+          <PlateShine />
 
           <div className="relative">
             <p className="text-sm font-semibold text-accent">
@@ -67,55 +64,42 @@ export default function About() {
           </div>
         </div>
 
+        </SlideIn>
+
         {/* Contenido */}
-        <div>
+        <SlideIn from="right" delay={0.1}>
           <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
             Hola, soy Obed
           </h2>
 
           <p className="mt-6 text-lg leading-relaxed text-ink-muted">
-            Me forme en Ingeniería en Software por la Universidad Autónoma de
-            Zacatecas; me dedico al desarrollo web porque una
-            buena página cambia la forma en que un negocio se presenta y
-            atrae clientes.
+            Mi formación en Ingeniería en Software en la Universidad Autónoma
+            de Zacatecas me ha dado una base técnica para desarrollar
+            soluciones web. Me dedico al desarrollo web porque una buena
+            página puede cambiar la forma en que un negocio se presenta y
+            conecta con sus clientes.
           </p>
 
           <p className="mt-4 text-lg leading-relaxed text-ink-muted">
-            Antes de crear tu página, busco entender tu negocio: qué quieres lograr, 
-            quiénes son y quiénes quieres que sean tus clientes, qué necesitas comunicar 
-            y qué funciones realmente te pueden ayudar. Así evitamos complicar el proyecto y 
-            construimos una solución clara, funcional y pensada para tu negocio, con atención 
-            directa de principio a fin.
+            Antes de crear tu página, busco entender qué quieres lograr, a
+            quién quieres llegar y qué necesita realmente tu proyecto. Así
+            puedo construir una solución clara, funcional y sin
+            complicaciones innecesarias.
           </p>
 
-          <blockquote className="mt-6 border-l-2 border-silver pl-5 text-lg italic leading-relaxed text-ink">
-            Zacatecas es tierra de plata, y la plata se trabaja con paciencia hasta revelar su brillo. De esa idea nace{" "}
-            <span className="font-semibold not-italic">
-              i<span className="text-accent">z</span>t
-              <span className="text-accent">ac</span>
+          <blockquote className="mt-6 border-l-2 border-silver pl-5 text-lg leading-relaxed text-ink">
+            Zacatecas es tierra de plata, y la plata se trabaja con paciencia
+            hasta revelar su brillo. De esa idea nace{" "}
+            <span className="font-semibold">
+              i<span className="text-accent">z</span>t<span className="text-accent">ac</span>
             </span>
-            inspirado en{" "}
-            <span className="font-semibold not-italic">
-              i<span className="text-accent">z</span>t
-              <span className="text-accent">ac</span>
-            </span>
-            teocuitlatl. Cada sitio se construye con detalle hasta lograr una presencia digital propia, clara y capaz de destacar.
+            , inspirado en la expresión náhuatl{" "}
+            <em className="font-medium">iztac teocuitlatl</em>,
+            utilizada para referirse a la plata. Cada sitio se construye con
+            detalle hasta convertirse en una presencia digital con identidad
+            propia, hecha para destacar.
           </blockquote>
-
-          <ul className="mt-8 grid gap-3 sm:grid-cols-2">
-            {strengths.map(({ icon: Icon, label }) => (
-              <li
-                key={label}
-                className="silver-edge-light flex items-center gap-3 rounded-xl p-4 font-medium"
-              >
-                <span className="silver-tile shrink-0 rounded-lg p-2 text-accent">
-                  <Icon size={20} />
-                </span>
-                <span>{label}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
+        </SlideIn>
       </div>
     </section>
   );
