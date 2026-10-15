@@ -218,3 +218,103 @@ body {
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+/* ---------- Movimiento continuo ---------- */
+
+/* Evita que las entradas laterales generen scroll horizontal */
+html,
+body {
+  overflow-x: clip;
+}
+
+/* Botones de acción: destello de luz cada pocos segundos y respuesta al tocar */
+.glow-cta {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition:
+    box-shadow 0.3s ease,
+    background-color 0.2s ease,
+    transform 0.15s ease,
+    translate 0.2s ease;
+}
+.glow-cta::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(
+    110deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.45) 50%,
+    transparent 70%
+  );
+  transform: translateX(-130%);
+  animation: destello 5.5s ease-in-out infinite;
+}
+@keyframes destello {
+  0%,
+  72% {
+    transform: translateX(-130%);
+  }
+  92%,
+  100% {
+    transform: translateX(130%);
+  }
+}
+.glow-cta:active {
+  transform: scale(0.96);
+}
+
+/* WhatsApp: pulso suave de vez en cuando */
+.glow-wa::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 2px solid rgba(37, 211, 102, 0.75);
+  pointer-events: none;
+  animation: pulso-wa 4.5s ease-out infinite;
+}
+@keyframes pulso-wa {
+  0% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+  45%,
+  100% {
+    transform: scale(1.75);
+    opacity: 0;
+  }
+}
+
+/* Ilustración del inicio: flotación lenta */
+.mockup-float {
+  animation: flotar 7s ease-in-out infinite;
+}
+.mockup-float-alt {
+  animation: flotar 6s ease-in-out -2.5s infinite;
+}
+@keyframes flotar {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glow-cta::after,
+  .glow-wa::before,
+  .mockup-float,
+  .mockup-float-alt {
+    animation: none;
+  }
+  .glow-cta::after,
+  .glow-wa::before {
+    display: none;
+  }
+}

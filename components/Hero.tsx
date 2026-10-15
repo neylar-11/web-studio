@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, FileText } from "lucide-react";
+import HeroMockup from "./HeroMockup";
 
 export default function Hero() {
   return (
@@ -31,7 +32,7 @@ export default function Hero() {
       />
 
       {/* Contenido principal */}
-      <div className="relative mx-auto w-full max-w-6xl px-5 py-16 sm:py-24">
+      <div className="relative mx-auto grid w-full max-w-6xl items-center gap-12 px-5 py-16 sm:py-24 xl:grid-cols-[minmax(0,1fr)_400px] xl:gap-8">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -76,6 +77,16 @@ export default function Hero() {
               <ArrowRight size={20} />
             </a>
           </div>
+        </motion.div>
+
+        {/* Ilustración animada: en celular va debajo de los botones */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.25, ease: "easeOut" }}
+          className="w-full max-w-[400px] sm:max-w-[440px] xl:max-w-none"
+        >
+          <HeroMockup />
         </motion.div>
       </div>
     </section>

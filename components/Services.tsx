@@ -1,4 +1,4 @@
-import { Reveal, Cascade, CascadeItem } from "./Motion";
+import { Reveal, Cascade, CascadeItem, Words } from "./Motion";
 import {
   Globe,
   Rocket,
@@ -58,9 +58,10 @@ export default function Services() {
     <section id="servicios" className="scroll-mt-20 bg-card py-16 sm:py-24 text-ink">
       <div className="mx-auto max-w-6xl px-5">
         <Reveal className="max-w-2xl">
-          <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
-            ¿Qué necesita tu negocio?
-          </h2>
+          <Words
+            lines={["¿Qué necesita tu negocio?"]}
+            className="text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl"
+          />
 
           <p className="mt-5 text-lg leading-relaxed text-ink-muted">
             Desde una página informativa hasta una solución a medida.
@@ -72,8 +73,14 @@ export default function Services() {
         </Reveal>
 
         <Cascade className="mt-10 grid gap-4 sm:mt-14 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
-          {services.map(({ icon: Icon, title, text }) => (
-            <CascadeItem key={title} className="h-full">
+          {services.map(({ icon: Icon, title, text }, i) => (
+            <CascadeItem
+              key={title}
+              index={i}
+              columns={4}
+              mobile="alternate"
+              className="h-full"
+            >
               <article className="silver-edge-light h-full rounded-2xl p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md sm:p-6">
                 {/* En celular, ícono y título en la misma fila */}
                 <div className="flex items-center gap-4 sm:block">

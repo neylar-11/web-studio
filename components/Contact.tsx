@@ -1,6 +1,6 @@
 "use client";
 
-import { Reveal } from "./Motion";
+import { Reveal, Words } from "./Motion";
 
 import { useState } from "react";
 import { MessageCircle, Mail, Phone } from "lucide-react";
@@ -63,9 +63,10 @@ export default function Contact() {
       <div className="relative mx-auto grid max-w-6xl gap-14 px-5 lg:grid-cols-2 lg:gap-20">
         {/* Texto y accesos directos */}
         <Reveal>
-          <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
-            Cada negocio es distinto. Tu cotización también.
-          </h2>
+          <Words
+            lines={["Cada negocio es distinto.", "Tu cotización también."]}
+            className="text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl"
+          />
           <p className="mt-5 text-lg leading-relaxed text-muted">
             Cuéntame qué necesitas y te envío una propuesta clara, con alcance,
             tiempos y costo. Sin compromiso.

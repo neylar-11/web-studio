@@ -1,4 +1,4 @@
-import { SlideIn } from "./Motion";
+import { SlideIn, Words } from "./Motion";
 import PlateShine from "./PlateShine";
 import {
   Code2,
@@ -68,9 +68,10 @@ export default function About() {
 
         {/* Contenido */}
         <SlideIn from="right" delay={0.1}>
-          <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
-            Hola, soy Obed
-          </h2>
+          <Words
+            lines={["Hola, soy Obed"]}
+            className="text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl"
+          />
 
           <p className="mt-6 text-lg leading-relaxed text-ink-muted">
             Mi formación en Ingeniería en Software en la Universidad Autónoma

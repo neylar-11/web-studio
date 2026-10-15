@@ -1,4 +1,4 @@
-import { Reveal, Cascade, CascadeItem } from "./Motion";
+import { Reveal, Cascade, CascadeItem, Words } from "./Motion";
 import { ArrowUpRight } from "lucide-react";
 
 const projects = [
@@ -47,9 +47,10 @@ export default function Portfolio() {
             Portafolio
           </p>
 
-          <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
-            Algunos proyectos
-          </h2>
+          <Words
+            lines={["Algunos proyectos"]}
+            className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl"
+          />
 
           <p className="mt-5 text-lg leading-relaxed text-muted">
             Ejemplos de soluciones para distintos tipos de negocio.
@@ -59,9 +60,12 @@ export default function Portfolio() {
         {/* Proyectos */}
         {/* En celular las tarjetas se deslizan de lado; en computadora, 3 columnas */}
         <Cascade className="no-scrollbar -mx-5 mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-4 sm:mt-14 lg:mx-0 lg:grid lg:grid-cols-3 lg:gap-6 lg:overflow-visible lg:px-0 lg:pb-0">
-          {projects.map((project) => (
+          {projects.map((project, i) => (
             <CascadeItem
               key={project.title}
+              index={i}
+              columns={3}
+              mobile="rise"
               className="w-[86%] shrink-0 snap-center sm:w-[62%] lg:w-auto"
             >
             <article className="silver-edge group h-full overflow-hidden rounded-3xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">

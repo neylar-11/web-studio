@@ -1,4 +1,4 @@
-import { Reveal, Cascade, CascadeItem } from "./Motion";
+import { Reveal, Cascade, CascadeItem, Words } from "./Motion";
 import {
   MonitorSmartphone,
   PenTool,
@@ -50,16 +50,15 @@ export default function WhyMe() {
             Más que estar en redes
           </p>
 
-          <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
-            Lo que una buena web{" "}
-            <br className="hidden md:block" />
-            hace por tu negocio
-          </h2>
+          <Words
+            lines={["Lo que una buena web", "hace por tu negocio"]}
+            className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl"
+          />
         </Reveal>
 
         <Cascade className="mt-12 grid gap-x-10 gap-y-10 sm:mt-16 sm:grid-cols-2 sm:gap-y-12 lg:grid-cols-3">
-          {benefits.map(({ icon: Icon, title, text }) => (
-            <CascadeItem key={title}>
+          {benefits.map(({ icon: Icon, title, text }, i) => (
+            <CascadeItem key={title} index={i} columns={3} mobile="tilt">
             <article className="flex gap-4">
               <div className="flex h-12 w-12 shrink-0 items-center justify-center silver-tile rounded-2xl text-accent">
                 <Icon size={24} />

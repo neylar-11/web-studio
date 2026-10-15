@@ -1,4 +1,4 @@
-import { Reveal } from "./Motion";
+import { Reveal, Words } from "./Motion";
 import { Suspense } from "react";
 import { ChevronDown } from "lucide-react";
 import { faq } from "@/data/faq";
@@ -10,9 +10,10 @@ export default function FAQ() {
     <section id="faq" className="scroll-mt-20 bg-card py-16 sm:py-24 text-ink">
       <div className="mx-auto max-w-3xl px-5">
         <Reveal>
-          <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
-            Preguntas frecuentes
-          </h2>
+          <Words
+            lines={["Preguntas frecuentes"]}
+            className="text-3xl font-extrabold tracking-tight sm:text-4xl"
+          />
           <p className="mt-4 text-lg text-ink-muted">
             Las dudas más comunes antes de empezar un proyecto.
           </p>

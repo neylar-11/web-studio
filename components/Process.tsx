@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion, useReducedMotion, useSpring, useTransform } from "framer-motion";
-import { Reveal, SlideIn } from "./Motion";
+import { Reveal, SlideIn, Words } from "./Motion";
 import {
   MessageSquare,
   ClipboardList,
@@ -129,9 +129,10 @@ export default function Process() {
             El proceso
           </p>
 
-          <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
-            Así toma forma tu proyecto
-          </h2>
+          <Words
+            lines={["Así toma forma tu proyecto"]}
+            className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl"
+          />
 
           <p className="mt-5 text-lg leading-relaxed text-ink-muted">
             Cinco pasos claros, de la primera plática a la entrega.
@@ -191,6 +192,7 @@ export default function Process() {
                 {/* Tarjeta */}
                 <SlideIn
                   from={isLeft ? "left" : "right"}
+                  mobileFrom="right"
                   className={`col-start-2 row-start-1 min-w-0 ${
                     isLeft ? "md:col-start-1" : "md:col-start-3"
                   }`}
