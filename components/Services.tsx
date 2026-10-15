@@ -54,7 +54,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="servicios" className="scroll-mt-20 bg-paper py-24 text-ink">
+    <section id="servicios" className="scroll-mt-20 bg-card py-24 text-ink">
       <div className="mx-auto max-w-6xl px-5">
         <div className="max-w-2xl">
          
@@ -67,6 +67,10 @@ export default function Services() {
             Soluciones digitales claras y adaptadas a negocios que quieren
             crecer en internet, mejorar su presencia y conectar con más
             clientes.
+          </p>
+
+          <p className="mt-4 inline-flex items-center gap-2 rounded-full bg-accent/10 px-4 py-2 font-semibold text-accent">
+            Precios accesibles y a tu medida: solo pagas lo que tu negocio necesita.
           </p>
         </div>
 

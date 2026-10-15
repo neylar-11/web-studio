@@ -7,7 +7,7 @@ export const faq: FaqItem[] = [
   {
     question: "¿Cuánto cuesta una página web?",
     answer:
-      "Depende de lo que tu negocio necesite: no cuesta lo mismo una página informativa que una tienda en línea. Por eso no manejo precios fijos; platicamos, entiendo tu proyecto y te envío una cotización clara y sin compromiso.",
+      "Depende de lo que tu negocio necesite: no cuesta lo mismo una página informativa que una tienda en línea, y el dominio y el alojamiento pueden ser gratuitos o de pago según lo que prefieras. Por eso no manejo precios fijos; platicamos, entiendo tu proyecto y te envío una cotización clara, accesible y sin compromiso.",
   },
   {
     question: "¿Cuánto tiempo tarda?",

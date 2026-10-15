@@ -48,7 +48,7 @@ export default function Process() {
   return (
     <section
       id="proceso"
-      className="scroll-mt-20 bg-paper py-24 text-ink"
+      className="scroll-mt-20 bg-card py-24 text-ink"
     >
       <div className="mx-auto max-w-6xl px-5">
 
@@ -96,7 +96,7 @@ export default function Process() {
                       md:col-start-2
                     "
                   >
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent text-sm font-bold text-white shadow-lg shadow-accent/20 ring-4 ring-paper outline outline-2 outline-offset-4 outline-silver/70">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent text-sm font-bold text-white shadow-lg shadow-accent/20 ring-4 ring-card outline outline-2 outline-offset-4 outline-silver/70">
                       {step.number}
                     </div>
                   </div>

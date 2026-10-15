@@ -1,13 +1,28 @@
 import {
   MonitorSmartphone,
-  MessagesSquare,
-  BadgeCheck,
-  UserCheck,
   PenTool,
-  SlidersHorizontal,
+  UserCheck,
+  Share2,
+  Search,
+  Clock,
 } from "lucide-react";
 
 const benefits = [
+  {
+    icon: Share2,
+    title: "Tus redes no son tuyas",
+    text: "Facebook e Instagram cambian sus reglas de forma inesperada y tu alcance puede bajar de un día para otro. Tu página no tiene lmites.",
+  },
+  {
+    icon: Search,
+    title: "Te encuentran en Google",
+    text: "Antes de comprar, tus clientes buscan en Google. Con tu página, tu negocio aparece justo donde te están buscando.",
+  },
+  {
+    icon: Clock,
+    title: "Trabaja las 24 horas",
+    text: "Tu página informa y atrae clientes todos los días, a cualquier hora, aunque no estés publicando.",
+  },
   {
     icon: MonitorSmartphone,
     title: "Adaptada a cualquier dispositivo",
@@ -17,21 +32,6 @@ const benefits = [
     icon: PenTool,
     title: "Diseño pensado para tu negocio",
     text: "La estructura, imagen y contenido se desarrollan de acuerdo con tu marca, tus servicios y lo que quieres comunicar.",
-  },
-  {
-    icon: MessagesSquare,
-    title: "Canales de contacto a tu medida",
-    text: "Podemos integrar WhatsApp, redes sociales, formularios u otros medios de contacto según las necesidades de tu negocio.",
-  },
-  {
-    icon: SlidersHorizontal,
-    title: "Funciones según tus necesidades",
-    text: "Cada proyecto puede incorporar las herramientas y funciones que realmente necesites, sin agregar elementos innecesarios.",
-  },
-  {
-    icon: BadgeCheck,
-    title: "Presencia profesional y confiable",
-    text: "Cada detalle se trabaja para que tu negocio proyecte una imagen profesional y genere confianza desde el primer contacto.",
   },
   {
     icon: UserCheck,

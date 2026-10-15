@@ -27,7 +27,7 @@ const areas = [
 
 export default function About() {
   return (
-    <section id="sobre-mi" className="scroll-mt-20 bg-paper py-24 text-ink">
+    <section id="sobre-mi" className="scroll-mt-20 bg-card py-24 text-ink">
       <div className="mx-auto grid max-w-6xl items-center gap-14 px-5 lg:grid-cols-[2fr_3fr] lg:gap-20">
         {/* Tarjeta visual: placa de plata */}
         <div className="silver-plate relative overflow-hidden rounded-3xl p-8 text-ink">
@@ -88,13 +88,19 @@ export default function About() {
             directa de principio a fin.
           </p>
 
-          <p className="mt-4 text-lg leading-relaxed text-ink-muted">
-            Mi visión es mantenerme en constante capacitación y actualización en desarrollo web, 
-            bases de datos, arquitectura de software y nuevas tecnologías. Busco fortalecer 
-            continuamente mis conocimientos técnicos para aplicar mejores prácticas, adoptar 
-            herramientas actuales y desarrollar soluciones cada vez más completas, funcionales y 
-            adaptadas a las necesidades reales de cada proyecto.
-          </p>
+          <blockquote className="mt-6 border-l-2 border-silver pl-5 text-lg italic leading-relaxed text-ink">
+            Zacatecas es tierra de plata, y la plata se trabaja con paciencia hasta revelar su brillo. De esa idea nace{" "}
+            <span className="font-semibold not-italic">
+              i<span className="text-accent">z</span>t
+              <span className="text-accent">ac</span>
+            </span>
+            inspirado en{" "}
+            <span className="font-semibold not-italic">
+              i<span className="text-accent">z</span>t
+              <span className="text-accent">ac</span>
+            </span>
+            teocuitlatl. Cada sitio se construye con detalle hasta lograr una presencia digital propia, clara y capaz de destacar.
+          </blockquote>
 
           <ul className="mt-8 grid gap-3 sm:grid-cols-2">
             {strengths.map(({ icon: Icon, label }) => (
